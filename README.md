@@ -16,7 +16,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.sftp
-      labels:
+    labels:
       lagoon.type: sftp-persistent
       lagoon.template: lagoon/sftp-persistent.yml
       lagoon.persistent.name: nginx # mount the persistent storage of nginx into this container

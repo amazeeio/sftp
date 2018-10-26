@@ -5,11 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.sftp
-      labels:
-        lagoon.type: sftp-persistent
-        lagoon.template: lagoon/sftp-persistent.yml
-        lagoon.persistent.name: nginx # mount the persistent storage of nginx into this container
-        lagoon.persistent: /home/sftpupload/upload/ # location where the persistent storage should be mounted
+    labels:
+      lagoon.type: sftp-persistent
+      lagoon.template: lagoon/sftp-persistent.yml
+      lagoon.persistent.name: nginx # mount the persistent storage of nginx into this container
+      lagoon.persistent: /home/sftpupload/upload/ # location where the persistent storage should be mounted
     environment:
       # change following keys based on your generated keys
       SSH_HOST_ED25519_KEY: '-----BEGIN OPENSSH PRIVATE KEY-----CHANGEME'
